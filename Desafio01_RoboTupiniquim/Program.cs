@@ -124,7 +124,7 @@ namespace Desafio01_RoboTupiniquim
             Console.Write("Robô Tupiniquim");
 
             Console.SetCursorPosition(28, 22);
-            Console.Write("(Q/E) Muda Direção - (M) Se move - (O) ■ Robo 1 - (Y) ▲ Robo 2");
+            Console.Write("(E/D) Muda Direção - (M) Se move - (O) ■ Robo 1 - (Y) ▲ Robo 2");
 
             Console.SetCursorPosition(113, 24);
             Console.Write("N");
@@ -141,7 +141,7 @@ namespace Desafio01_RoboTupiniquim
         private static void MudaDirecao(ref string direcao, ref int contador, ConsoleKeyInfo tecla)
         {
 
-            if (tecla.Key == ConsoleKey.E)
+            if (tecla.Key == ConsoleKey.D)
             {
                 contador++;
                 if (contador > 4)
@@ -157,7 +157,7 @@ namespace Desafio01_RoboTupiniquim
                 }
             }
 
-            if (tecla.Key == ConsoleKey.Q)
+            if (tecla.Key == ConsoleKey.E)
             {
                 contador--;
                 if (contador < 1)
@@ -210,18 +210,18 @@ namespace Desafio01_RoboTupiniquim
             int xArea = (Console.WindowWidth / 2);
             int yArea = (Console.WindowHeight / 2);
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 7; i++)
             {
-                Console.SetCursorPosition(xArea - 6, yArea - i + 1);
+                Console.SetCursorPosition(xArea - 7, yArea - i + 2);
                 Console.Write("▓");
 
-                Console.SetCursorPosition(xArea, yArea - i);
+                Console.SetCursorPosition(xArea, yArea - i + 1);
                 Console.Write("▓");
 
                 Console.SetCursorPosition(xArea - i - 1, yArea - 5);
                 Console.Write("▓");
 
-                Console.SetCursorPosition(xArea - i, yArea + 1);
+                Console.SetCursorPosition(xArea - i, yArea + 2);
                 Console.Write("▓");
             }
         }
@@ -236,14 +236,14 @@ namespace Desafio01_RoboTupiniquim
         {
             switch (x)
             {
-                case 54: x++; xp++; break; //55
+                case 53: x++; xp++; break; //55
                 case 60: x--; xp--; break; //59
             }
 
             switch (y)
             {
                 case 10: y++; yp--; break; //11
-                case 16: y--; yp++; break; //15
+                case 17: y--; yp++; break; //15
             }
         }
 
